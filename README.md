@@ -4,7 +4,7 @@ A repository for learning how neural networks actually work by building them fro
 
 No black boxes. No magic. Just code, math, and understanding.
 
-We start with a single neuron and build up to deep learning architectures, implementing everything in NumPy to see exactly what's happening under the hood.
+We start with a single neuron and build up to deep learning architectures, implementing everything gradually to see exactly what's happening under the hood.
 
 ## Getting Started
 ```bash
