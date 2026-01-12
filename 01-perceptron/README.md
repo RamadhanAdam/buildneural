@@ -14,11 +14,9 @@ pip install -r requirements.txt
 jupyter notebook perceptron.ipynb
 ```
 
-Or open in [Colab](your-colab-link)
-
 ## Read the Article
 
-[Building a Perceptron From Scratch](your-medium-link)
+[Building a Perceptron From Scratch]([your-medium-link](https://medium.com/@ramadhanzome4/building-a-perceptron-from-scratch-your-first-neural-network-baaaada189d9?postPublishedType=repub))
 ```
 
 ### 01-perceptron/requirements.txt
