@@ -19,7 +19,6 @@ Browse the folders. Each one is a complete lesson with working code.
 
 Ramadhan Adam
 
-- GitHub: [@RamadhanAdam](https://github.com/RamadhanAdam)
 - Medium: [@RamadhanZome](https://medium.com/@RamadhanZome)
 - Twitter: [@RamadhanZome](https://twitter.com/RamadhanZome)
 - BlueSky: [@0x_zome](https://bsky.app/profile/0x_zome)
