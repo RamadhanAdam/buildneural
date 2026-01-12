@@ -17,7 +17,6 @@ jupyter notebook perceptron.ipynb
 ## Read the Article
 
 [Building a Perceptron From Scratch](https://medium.com/@ramadhanzome4/building-a-perceptron-from-scratch-your-first-neural-network-baaaada189d9?postPublishedType=repub)
-```
 
 ### 01-perceptron/requirements.txt
 
