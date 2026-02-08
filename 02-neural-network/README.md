@@ -40,4 +40,4 @@ Result: Intelligence emerges from organized trial and error.
 
 ## Read More
 
-Full explanation: [Part 3 on Medium](https://medium.com/@ramadhan.zome)
+Full explanation: [Part 3 on Medium](hhttps://medium.com/@ramadhanzome4/the-algorithm-that-learns-from-being-wrong-da75f0c50aca)
