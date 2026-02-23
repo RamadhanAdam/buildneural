@@ -1,0 +1,21 @@
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Compiled binaries
+rnn_ga
+rnn_ga.exe
+visualizer
+visualizer.exe
+
+# Object files
+*.o
+*.out
+
+# Windows MinGW artifacts
+*.stackdump
+
+# Editor folders
+.vscode/
+.idea/
