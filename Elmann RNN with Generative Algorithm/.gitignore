@@ -3,19 +3,18 @@
 .AppleDouble
 .LSOverride
 
-# Compiled binaries
+# Compiled binaries — these get generated when you compile, no need to track them
 rnn_ga
-rnn_ga.exe
 visualizer
-visualizer.exe
-
-# Object files
 *.o
 *.out
+rnn_ga.exe
+visualizer.exe
 
-# Windows MinGW artifacts
-*.stackdump
-
-# Editor folders
+# Editor files
 .vscode/
-.idea/
+*.swp
+*.swo
+
+# Crash logs
+*.dSYM/
