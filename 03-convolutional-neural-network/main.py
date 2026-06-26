@@ -15,15 +15,19 @@ from cnn import TinyCNN
 
 
 def make_pattern(label, rng):
+    """Create one noisy 8x8 image for a chosen class."""
     image = rng.normal(0.0, 0.08, (8, 8))
 
     if label == 0:
+        # Vertical line: one bright column.
         col = rng.integers(2, 6)
         image[:, col] += 1.0
     elif label == 1:
+        # Horizontal line: one bright row.
         row = rng.integers(2, 6)
         image[row, :] += 1.0
     else:
+        # Diagonal line: either left-to-right or right-to-left.
         if rng.random() < 0.5:
             np.fill_diagonal(image, image.diagonal() + 1.0)
         else:
@@ -33,6 +37,7 @@ def make_pattern(label, rng):
 
 
 def make_dataset(samples_per_class=80, seed=7):
+    """Build a shuffled toy dataset for the CNN to learn from."""
     rng = np.random.default_rng(seed)
     images = []
     labels = []
@@ -49,6 +54,7 @@ def make_dataset(samples_per_class=80, seed=7):
 
 
 def train():
+    """Train the network and print progress each epoch."""
     images, labels = make_dataset()
     split = int(len(labels) * 0.8)
     train_images, test_images = images[:split], images[split:]
@@ -63,6 +69,8 @@ def train():
 
     for epoch in range(12):
         total_loss = 0.0
+
+        # Shuffle every epoch so the network does not memorize the data order.
         order = np.random.default_rng(epoch).permutation(len(train_labels))
 
         for index in order:
