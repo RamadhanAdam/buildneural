@@ -15,6 +15,12 @@ pip install -r requirements.txt
 
 Browse the folders. Each one is a complete lesson with working code.
 
+## Lessons
+
+- `01-perceptron` - A single neuron that learns a decision boundary
+- `02-neural-network` - A fully connected neural network for MNIST digits
+- `03-convolutional-neural-network` - A CNN from scratch for small image patterns
+
 ## Contact
 
 Ramadhan Adam
