@@ -21,6 +21,7 @@ Each folder is a complete lesson with working code and its own README. The Pytho
 - `02-neural-network` - A fully connected neural network for MNIST digits
 - `03-convolutional-neural-network` - A CNN from scratch for small image patterns
 - `04-elman-rnn-genetic-algorithm` - An Elman RNN in C, trained by a genetic algorithm instead of backpropagation
+- `05-attention` - Self-attention, multi-head attention, tokenization and decoding, worked through from *Understanding Deep Learning*
 
 ## Contact
 
