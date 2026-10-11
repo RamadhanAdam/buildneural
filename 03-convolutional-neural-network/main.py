@@ -78,7 +78,9 @@ def train():
 
         accuracy = network.evaluate(test_images, test_labels)
         average_loss = total_loss / len(train_labels)
-        print(f"Epoch {epoch + 1:02d} | loss {average_loss:.4f} | accuracy {accuracy:.2%}")
+        print(
+            f"Epoch {epoch + 1:02d} | loss {average_loss:.4f} | accuracy {accuracy:.2%}"
+        )
 
     print()
     print("Example predictions:")

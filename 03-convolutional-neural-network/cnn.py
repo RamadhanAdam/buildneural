@@ -24,7 +24,9 @@ class TinyCNN:
         self.relu = ReLU()
         self.pool = MaxPool2D(pool_size=2)
         self.flatten = Flatten()
-        self.dense = Dense(input_len=3 * 3 * 4, output_len=3, learning_rate=learning_rate)
+        self.dense = Dense(
+            input_len=3 * 3 * 4, output_len=3, learning_rate=learning_rate
+        )
         self.loss = SoftmaxCrossEntropy()
 
     def forward(self, image):

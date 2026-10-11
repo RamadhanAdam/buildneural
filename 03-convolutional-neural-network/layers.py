@@ -29,9 +29,7 @@ class Conv2D:
 
         # He-style scaling keeps the starting values from being too tiny or too wild.
         scale = np.sqrt(2.0 / (filter_size * filter_size))
-        self.filters = rng.normal(
-            0.0, scale, (num_filters, filter_size, filter_size)
-        )
+        self.filters = rng.normal(0.0, scale, (num_filters, filter_size, filter_size))
         self.biases = np.zeros(num_filters)
 
     def iterate_regions(self, image):
@@ -54,7 +52,11 @@ class Conv2D:
         self.last_input = image
         height, width = image.shape
         output = np.zeros(
-            (height - self.filter_size + 1, width - self.filter_size + 1, self.num_filters)
+            (
+                height - self.filter_size + 1,
+                width - self.filter_size + 1,
+                self.num_filters,
+            )
         )
 
         for region, row, col in self.iterate_regions(image):
@@ -87,7 +89,9 @@ class Conv2D:
                 d_loss_d_input[
                     row : row + self.filter_size,
                     col : col + self.filter_size,
-                ] += gradient * self.filters[filter_index]
+                ] += (
+                    gradient * self.filters[filter_index]
+                )
 
         # Gradient descent: step in the opposite direction of the error.
         self.filters -= self.learning_rate * d_loss_d_filters
@@ -139,7 +143,9 @@ class MaxPool2D:
         """Keep the maximum value from each pooling window."""
         self.last_input = input_data
         height, width, num_filters = input_data.shape
-        output = np.zeros((height // self.pool_size, width // self.pool_size, num_filters))
+        output = np.zeros(
+            (height // self.pool_size, width // self.pool_size, num_filters)
+        )
 
         for region, row, col in self.iterate_regions(input_data):
             output[row, col] = np.amax(region, axis=(0, 1))
@@ -190,7 +196,9 @@ class Dense:
     def __init__(self, input_len, output_len, learning_rate=0.01, seed=42):
         self.learning_rate = learning_rate
         rng = np.random.default_rng(seed)
-        self.weights = rng.normal(0.0, np.sqrt(2.0 / input_len), (input_len, output_len))
+        self.weights = rng.normal(
+            0.0, np.sqrt(2.0 / input_len), (input_len, output_len)
+        )
         self.biases = np.zeros(output_len)
 
     def forward(self, input_data):
