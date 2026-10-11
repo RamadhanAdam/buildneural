@@ -1,12 +1,12 @@
 # Elman RNN trained with a Genetic Algorithm
 
-A recurrent neural network written in C, trained without backpropagation.
-Instead of computing gradients like a normal person, we treat the weights
-like DNA and let evolution figure it out. Surprisingly, it works.
+A recurrent neural network written in C and trained without backpropagation.
+Instead of computing gradients, the weights are treated as genes and evolved
+with a genetic algorithm: keep the networks that predict best, mix and mutate them, repeat.
 
-This is not how real production RNNs are trained. Nobody at Google is doing this.
-But it is a clean way to understand what weights actually do and how a network
-can learn sequential patterns without anyone doing any calculus.
+Production RNNs are trained with gradients, not like this. But evolving the weights
+makes it easy to see what they do, and how a network can learn a sequential
+pattern with no calculus involved.
 
 
 ## What it learns
